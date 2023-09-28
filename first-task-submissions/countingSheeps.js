@@ -1,8 +1,8 @@
 function countingSheeps(num) {
 
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i <= num; i++) {
         console.log(`${i} sheeps`);
     }
 }
 
-countingSheeps(3)
+countingSheeps(5)
