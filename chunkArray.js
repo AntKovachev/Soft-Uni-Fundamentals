@@ -1,13 +1,16 @@
-function chunkArray(arr, chunkSize) {
-    const chunkedArray = [];
-    let index = 0;
+function filterPalindromes(arr) {
+  const isPalindrome = (str) => {
+    const cleanedStr = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
+    return cleanedStr === cleanedStr.split("").reverse().join("");
+  };
 
-    while (index < arr.length) {
-      chunkedArray.push(arr.slice(index, index + chunkSize));
-      index += chunkSize;
+  const palindromeArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (isPalindrome(arr[i])) {
+      palindromeArray.push(arr[i]);
     }
-
-    console.log(chunkedArray);
   }
 
-  chunkArray(originalArray, chunkSize);
+  return palindromeArray;
+}
